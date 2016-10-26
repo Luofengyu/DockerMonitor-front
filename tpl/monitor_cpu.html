@@ -1,0 +1,127 @@
+<div class="bg-light lter b-b wrapper-md">
+    <h1 class="m-n font-thin h3">Static Table</h1>
+</div>
+<div class="wrapper-md">
+    <div class="btn-group dropdown " dropdown>
+        <button class="btn btn-default btn-width" dropdown-toggle>Action <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+            <li><a href>Action</a></li>
+            <li><a href>Another action</a></li>
+            <li><a href>Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href>Separated link</a></li>
+        </ul>
+    </div>
+    <div class="panel hbox hbox-auto-xs no-border">
+        <div class="col wrapper">
+            <i class="fa fa-circle-o text-info m-r-sm pull-right"></i>
+            <h4 class="font-thin m-t-none m-b-none text-primary-lt">Managed Services</h4>
+            <span class="m-b block text-sm text-muted">Service report of this year (updated 1 hour ago)</span>
+            <div ng-init="d4= [[0,45.05484426742473],[1,44.401964026073045],[2,41.02728781957703],[3,36.5154086704758],[4,38.64066857151076],[5,39.89823021801377],[6,36.282313563291574],[7,38.59813793343179],[8,42.52152341252696],[9,46.71106919647224],[10,47.72256781595855],[11,43.85013130032139],[12,47.4815882950342],[13,51.34160194788721],[14,48.25515789702591],[15,45.20574182181715],[16,45.313124969217384],[17,49.51283891451358],[18,50.423227035081474],[19,50.79773957128846],[20,54.234337294970544],[21,56.0658200712783],[22,58.4967512028289],[23,55.15998172650486],[24,59.048362781375985],[25,63.04574090426904],[26,63.20790427428642],[27,60.892762305579296],[28,64.15408542024852],[29,66.7102155131853],[30,70.75597854975973],[31,66.32637388984794],[32,71.04423777957217],[33,67.98056355397804],[34,63.77601095163929],[35,68.05707470653019],[36,67.45781952530275],[37,71.24893791805347],[38,74.50931363592692],[39,74.36823699950118],[40,76.23118730745789],[41,80.52840792340274],[42,81.87564162467083],[43,79.28507054826103],[44,82.35492711697981],[45,85.22366088057684],[46,87.40966809103334],[47,89.26049930104827],[48,85.9554204755612],[49,82.35973841145437],[50,82.54271566245777],[51,83.5696879044588],[52,80.11389738756895],[53,80.18028960555475],[54,77.00509792781904],[55,77.20964291229144],[56,73.78409862681492],[57,73.49054005004069],[58,78.38220704478451],[59,74.46030057838766],[60,79.01287909997383],[61,79.55966808811499],[62,83.59417134215381],[63,83.1320513276704],[64,80.95217146363007],[65,76.69537253544303],[66,71.69651413634652],[67,68.51266976275744],[68,70.88206714044789],[69,70.0257750490839],[70,68.80309578284776],[71,66.61624972405839],[72,70.27317106137473],[73,73.65993369372934],[74,74.94296513752303],[75,73.26760793325866],[76,76.59087176819541],[77,80.60773071928774],[78,81.11169211493078],[79,85.45109777645452],[80,85.33486622235117],[81,81.20918587711098],[82,83.92045075872424],[83,87.1328396878894],[84,90.47567305676883],[85,89.89127151856148],[86,94.5704847413376],[87,95.51454221905179],[88,95.24213211995466],[89,91.90566294639257],[90,92.24083415507073],[91,87.55673212946137],[92,88.94821077196396],[93,85.06956189616724],[94,81.53964676256743],[95,84.77355255659506],[96,83.90573185504749],[97,85.29354859604399],[98,83.23279034305845],[99,87.05370225639086],[100,90.95109702524957],[101,89.47392983577086],[102,91.39113798130823],[103,91.96647328938184],[104,92.7197474695538],[105,92.37437002824863],[106,91.63879181988618],[107,89.9076328953924],[108,88.19541265473696],[109,84.85785447042171],[110,84.7042764353927],[111,82.03232542123081],[112,80.87623119497069],[113,79.48301288585851],[114,76.72322575501705],[115,78.31732657800305],[116,79.81184245754595],[117,84.56486226349149],[118,83.8502429222458],[119,82.00162769224505],[120,82.62981140012974],[121,87.38466495174201],[122,91.60021359195848],[123,91.88378598898899],[124,91.78455892054295],[125,95.36079957021822],[126,93.39160524112012],[127,96.40920648383897],[128,97.71288073900182],[129,97.59141886490198],[130,96.13696477475948],[131,92.41469466090287],[132,95.32318549661854],[133,96.65497605149166],[134,100],[135,100],[136,100],[137,96.42525506076596],[138,96.425617744805],[139,94.85430701096759],[140,91.46345186290071],[141,93.57501898652912],[142,89.67315894038991],[143,92.1015492198902],[144,87.2110347462232],[145,85.86093698237164],[146,81.8788683823881],[147,84.28522111569075],[148,88.49324493313314],[149,87.3367238273811]]"
+                 ui-jq="plot" ui-options="
+            [
+              { data: {{d4}}, lines: { show: true, lineWidth: 1, fill:true, fillColor: { colors: [{opacity: 0.2}, {opacity: 0.8}] } } }
+            ],
+            {
+              colors: ['{{app.color.light}}'],
+              series: { shadowSize: 3 },
+              xaxis:{ show:false },
+              yaxis:{ font: { color: '#a1a7ac' } },
+              grid: { hoverable: true, clickable: true, borderWidth: 0, color: '#dce5ec' },
+              tooltip: true,
+              tooltipOpts: { content: '%s of %x.1 is %y.4',  defaultTheme: false, shifts: { x: 10, y: -25 } }
+            }
+          " style="height:240px">
+            </div>
+        </div>
+        <div class="col wrapper-lg w-lg bg-light dk r-r">
+            <div class="m-b text-md">Recent Activity</div>
+            <div class="streamline b-l m-b">
+                <div class="sl-item">
+                    <div class="m-l">
+                        <div class="text-muted">5 minutes ago</div>
+                        <p><a href class="text-info">Jessi</a> commented your post.</p>
+                    </div>
+                </div>
+                <div class="sl-item">
+                    <div class="m-l">
+                        <div class="text-muted">11:30</div>
+                        <p>Join comference</p>
+                    </div>
+                </div>
+                <div class="sl-item b-success b-l">
+                    <div class="m-l">
+                        <div class="text-muted">10:30</div>
+                        <p>Call to customer <a href class="text-info">Jacob</a> and discuss the detail.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel wrapper">
+        <div class="row">
+            <div class="col-md-6 b-r b-light no-border-xs">
+                <a href class="text-muted pull-right text-lg"><i class="icon-arrow-right"></i></a>
+                <h4 class="font-thin m-t-none m-b-md text-muted">My Tasks</h4>
+                <div class=" m-b">
+                    <div class="m-b">
+                        <span class="label text-base bg-warning pos-rlt m-r"><i class="arrow right arrow-warning"></i> 19:30</span>
+                        <a href>Feed cat</a>
+                    </div>
+                    <div class="m-b">
+                        <span class="label text-base bg-info pos-rlt m-r"><i
+                                class="arrow right arrow-info"></i> 12:30</span>
+                        <a href>Fishing Time</a>
+                    </div>
+                    <div class="m-b">
+                        <span class="label text-base bg-primary pos-rlt m-r"><i class="arrow right arrow-primary"></i> 10:30</span>
+                        <a href>Kick-off meeting</a>
+                    </div>
+                    <div class="m-b">
+                        <span class="label text-base bg-light pos-rlt m-r"><i class="arrow right arrow-light"></i> 07:30</span>
+                        <a href>Morning running</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row row-sm">
+                    <div class="col-xs-6 text-center">
+                        <div ui-jq="easyPieChart" ui-options="{
+                    percent: 75,
+                    lineWidth: 4,
+                    trackColor: '{{app.color.light}}',
+                    barColor: '{{app.color.primary}}',
+                    scaleColor: false,
+                    size: 115,
+                    rotate: 90,
+                    lineCap: 'butt'
+                  }" class="inline m-t">
+                            <div>
+                                <span class="text-primary h4">75%</span>
+                            </div>
+                        </div>
+                        <div class="text-muted font-bold text-xs m-t m-b">Work Done</div>
+                    </div>
+                    <div class="col-xs-6 text-center">
+                        <div ui-jq="easyPieChart" ui-options="{
+                    percent: 50,
+                    lineWidth: 4,
+                    trackColor: '{{app.color.light}}',
+                    barColor: '{{app.color.info}}',
+                    scaleColor: false,
+                    size: 115,
+                    rotate: 180,
+                    lineCap: 'butt'
+                  }" class="inline m-t">
+                            <div>
+                                <span class="text-info h4">50%</span>
+                            </div>
+                        </div>
+                        <div class="text-muted font-bold text-xs m-t m-b">Started</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

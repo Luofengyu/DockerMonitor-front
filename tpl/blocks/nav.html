@@ -1,0 +1,118 @@
+<!-- list -->
+<ul class="nav">
+  <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+    <span translate="aside.nav.HEADER">Account</span>
+  </li>
+  <li ui-sref-active="active">
+    <a ui-sref="app.dashboard-v1">
+      <i class="glyphicon glyphicon-stats icon text-primary-dker"></i>
+      <span class="font-bold" translate="aside.nav.DASHBOARD">Dashboard</span>
+    </a>
+  </li>
+  <li ui-sref-active="active">
+    <a ui-sref="app.information">
+      <i class="glyphicon glyphicon-user icon text-primary-dk"></i>
+      <span class="font-bold" translate="aside.nav.Information">Information</span>
+    </a>
+  </li>
+  <li ui-sref-active="active">
+    <a ui-sref="app.right">
+      <i class="glyphicon glyphicon-check icon text-info-lter"></i>
+      <span class="font-bold" translate="aside.nav.Right">Right</span>
+    </a>
+  </li>
+  <li class="line dk"></li>
+
+  <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+    <span translate="aside.nav.Docker">Dockers</span>
+  </li>
+  <li>
+    <a href class="auto">      
+      <span class="pull-right text-muted">
+        <i class="fa fa-fw fa-angle-right text"></i>
+        <i class="fa fa-fw fa-angle-down text-active"></i>
+      </span>
+      <!--<b class="badge bg-info pull-right">3</b>-->
+      <i class="icon-speedometer"></i>
+      <span translate="aside.nav.Monitor">Monitoring</span>
+    </a>
+    <ul class="nav nav-sub dk">
+      <li class="nav-sub-header">
+        <a href>
+          <span translate="aside.nav.Monitor">Monitoring</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.monitor.state">
+          <span translate="aside.nav.monitor.State">State</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.monitor.cpu">
+          <span translate="aside.nav.monitor.Cpu">CPU</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.monitor.disk">
+          <span translate="aside.nav.monitor.Disk">Disk</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.monitor.memory">
+          <span translate="aside.nav.monitor.Memory">Memory</span>
+        </a>
+      </li>
+    </ul>
+  </li>
+  <li ng-class="{active:$state.includes('app.operation')}">
+    <a href class="auto">
+      <span class="pull-right text-muted">
+        <i class="fa fa-fw fa-angle-right text"></i>
+        <i class="fa fa-fw fa-angle-down text-active"></i>
+      </span>
+      <i class="icon-grid"></i>
+      <span translate="aside.nav.Operation">Operation</span>
+    </a>
+    <ul class="nav nav-sub dk">
+      <li class="nav-sub-header">
+        <a href>
+          <span >Operation</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.operation.create">
+          <span translate="aside.nav.operation.Create">Create</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.operation.delete">
+          <span translate="aside.nav.operation.Delete">Delete</span>
+        </a>
+      </li>
+    </ul>
+  </li>
+  <li ui-sref-active="active">
+    <a ui-sref="app.image">
+      <i class="icon-compass"></i>
+      <span translate="aside.nav.Image">Image</span>
+    </a>
+  </li>
+  <li ui-sref-active="active">
+    <a ui-sref="app.task">
+      <i class="icon-puzzle"></i>
+      <span translate="aside.nav.Task">Task</span>
+    </a>
+  </li>
+  <li class="line dk hidden-folded"></li>
+
+  <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">          
+    <span translate="aside.nav.Log">Log</span>
+  </li>  
+  <li>
+    <a ui-sref="app.log">
+      <i class="fa  fa-file-o"></i>
+      <span translate="aside.nav.Log">Log</span>
+    </a>
+  </li>
+</ul>
+<!-- / list -->

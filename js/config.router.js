@@ -85,11 +85,11 @@ angular.module('app')
               })
               .state('app.monitor.state', {
                   url: '/state',
-                  templateUrl: 'tpl/ui_buttons.html'
+                  templateUrl: 'tpl/monitor_state.html'
               })
               .state('app.monitor.cpu', {
                   url: '/cpu',
-                  templateUrl: 'tpl/ui_icons.html'
+                  templateUrl: 'tpl/monitor_cpu.html'
               })
               .state('app.monitor.disk', {
                   url: '/disk',
@@ -139,6 +139,10 @@ angular.module('app')
                               );
                           }]
                   }
+              })
+              .state('app.log', {
+                  url: '/log',
+                  templateUrl: 'tpl/ui_timeline.html'
               })
               /* .state('app.ui', {
                url: '/ui',
