@@ -1,0 +1,236 @@
+<div class="bg-light lter b-b wrapper-md">
+    <h1 class="m-n font-thin h3">Static Table</h1>
+</div>
+<div class="wrapper-md">
+    <div class="btn-group dropdown " dropdown>
+        <button class="btn btn-default btn-width" dropdown-toggle>Action <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+            <li><a href>Action</a></li>
+            <li><a href>Another action</a></li>
+            <li><a href>Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href>Separated link</a></li>
+        </ul>
+    </div>
+    <div class="panel wrapper">
+        <div class="row">
+            <div class="col-md-6 b-r b-light no-border-xs">
+                <a href class="text-muted pull-right text-lg"><i class="icon-arrow-right"></i></a>
+                <h4 class="font-thin m-t-none m-b-md text-muted">My Tasks</h4>
+                <div class=" m-b">
+                    <div class="m-b">
+                        <span class="label text-base bg-warning pos-rlt m-r"> 19:30</span>
+                        <a href>Feed cat</a>
+                    </div>
+                    <div class="m-b">
+                        <span class="label text-base bg-info pos-rlt m-r"><i
+                                class="arrow right arrow-info"></i> 12:30</span>
+                        <a href>Fishing Time</a>
+                    </div>
+                    <div class="m-b">
+                        <span class="label text-base bg-primary pos-rlt m-r">10:30</span>
+                        <a href>Kick-off meeting</a>
+                    </div>
+                    <div class="m-b">
+                        <span class="label text-base bg-light pos-rlt m-r"> 07:30</span>
+                        <a href>Morning running</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row row-sm">
+                    <div class="col-xs-4 text-center">
+                        <div ui-jq="easyPieChart" ui-options="{
+                    percent: 75,
+                    lineWidth: 4,
+                    trackColor: '{{app.color.light}}',
+                    barColor: '{{app.color.primary}}',
+                    scaleColor: false,
+                    size: 115,
+                    rotate: 0,
+                    lineCap: 'round'
+                  }" class="inline m-t">
+                            <div>
+                                <span class="text-primary h4">75%</span>
+                            </div>
+                        </div>
+                        <div class="text-muted font-bold text-xs m-t m-b">Work Done</div>
+                    </div>
+                    <div class="col-xs-4 text-center">
+                        <div ui-jq="easyPieChart" ui-options="{
+                    percent: 70,
+                    lineWidth: 4,
+                    trackColor: '{{app.color.light}}',
+                    barColor: '{{app.color.info}}',
+                    scaleColor: false,
+                    size: 115,
+                    rotate: 120,
+                    lineCap: 'round'
+                  }" class="inline m-t">
+                            <div>
+                                <span class="text-info h4">50%</span>
+                            </div>
+                        </div>
+                        <div class="text-muted font-bold text-xs m-t m-b">Started</div>
+                    </div>
+                    <div class="col-xs-4 text-center">
+                        <div ui-jq="easyPieChart" ui-options="{
+                    percent: 50,
+                    lineWidth: 4,
+                    trackColor: '{{app.color.light}}',
+                    barColor: '{{app.color.success}}',
+                    scaleColor: false,
+                    size: 115,
+                    rotate: 240,
+                    lineCap: 'round'
+                  }" class="inline m-t">
+                            <div>
+                                <span class="text-info h4">50%</span>
+                            </div>
+                        </div>
+                        <div class="text-muted font-bold text-xs m-t m-b">Started</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel hbox hbox-auto-xs no-border">
+        <div class="col wrapper">
+            <i class="fa fa-circle-o text-info m-r-sm pull-right"></i>
+            <h4 class="font-thin m-t-none m-b-none text-primary-lt">Managed Services</h4>
+            <span class="m-b block text-sm text-muted">Service report of this year (updated 1 hour ago)</span>
+            <div ng-init="d4= [[0,45.05484426742473],[1,44.401964026073045],[2,41.02728781957703],[3,36.5154086704758],[4,38.64066857151076],[5,39.89823021801377],[6,36.282313563291574],[7,38.59813793343179],[8,42.52152341252696],[9,46.71106919647224],[10,47.72256781595855],[11,43.85013130032139],[12,47.4815882950342],[13,51.34160194788721],[14,48.25515789702591],[15,45.20574182181715],[16,45.313124969217384],[17,49.51283891451358],[18,50.423227035081474],[19,50.79773957128846],[20,54.234337294970544],[21,56.0658200712783],[22,58.4967512028289],[23,55.15998172650486],[24,59.048362781375985],[25,63.04574090426904],[26,63.20790427428642],[27,60.892762305579296],[28,64.15408542024852]]"
+                 ui-jq="plot" ui-options="
+            [
+              { data: {{d4}}, lines: { show: true, lineWidth: 1, fill:true, fillColor: { colors: [{opacity: 0.2}, {opacity: 0.8}] } } }
+            ],
+            {
+              colors: ['{{app.color.light}}'],
+              series: { shadowSize: 3 },
+              xaxis:{ show:false },
+              yaxis:{ font: { color: '#a1a7ac' } },
+              grid: { hoverable: true, clickable: true, borderWidth: 0, color: '#dce5ec' },
+              tooltip: true,
+              tooltipOpts: { content: '%s of %x.1 is %y.4',  defaultTheme: false, shifts: { x: 10, y: -25 } }
+            }
+          " style="height:240px">
+            </div>
+        </div>
+        <div class="col wrapper-lg w-lg bg-light dk r-r">
+            <div class="m-b text-md">Recent Activity</div>
+            <div class="streamline b-l m-b">
+                <div class="sl-item">
+                    <div class="m-l">
+                        <div class="text-muted">5 minutes ago</div>
+                        <p><a href class="text-info">Jessi</a> commented your post.</p>
+                    </div>
+                </div>
+                <div class="sl-item">
+                    <div class="m-l">
+                        <div class="text-muted">11:30</div>
+                        <p>Join comference</p>
+                    </div>
+                </div>
+                <div class="sl-item b-success b-l">
+                    <div class="m-l">
+                        <div class="text-muted">10:30</div>
+                        <p>Call to customer <a href class="text-info">Jacob</a> and discuss the detail.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel hbox hbox-auto-xs no-border">
+        <div class="col wrapper">
+            <i class="fa fa-circle-o text-info m-r-sm pull-right"></i>
+            <h4 class="font-thin m-t-none m-b-none text-primary-lt">Managed Services</h4>
+            <span class="m-b block text-sm text-muted">Service report of this year (updated 1 hour ago)</span>
+            <div
+                 ui-jq="plot" ui-options="
+            [
+              { data: {{d4}}, lines: { show: true, lineWidth: 1, fill:true, fillColor: { colors: [{opacity: 0.2}, {opacity: 0.8}] } } }
+            ],
+            {
+              colors: ['{{app.color.light}}'],
+              series: { shadowSize: 3 },
+              xaxis:{ show:false },
+              yaxis:{ font: { color: '#a1a7ac' } },
+              grid: { hoverable: true, clickable: true, borderWidth: 0, color: '#dce5ec' },
+              tooltip: true,
+              tooltipOpts: { content: '%s of %x.1 is %y.4',  defaultTheme: false, shifts: { x: 10, y: -25 } }
+            }
+          " style="height:240px">
+            </div>
+        </div>
+        <div class="col wrapper-lg w-lg bg-light dk r-r">
+            <div class="m-b text-md">Recent Activity</div>
+            <div class="streamline b-l m-b">
+                <div class="sl-item">
+                    <div class="m-l">
+                        <div class="text-muted">11:30</div>
+                        <p>Join comference</p>
+                    </div>
+                </div>
+                <div class="sl-item b-success b-l">
+                    <div class="m-l">
+                        <div class="text-muted">10:30</div>
+                        <p>Call to customer <a href class="text-info">Jacob</a> and discuss the detail.</p>
+                    </div>
+                </div>
+                <div class="sl-item b-success b-l">
+                    <div class="m-l">
+                        <div class="text-muted">10:30</div>
+                        <p>Call to customer <a href class="text-info">Jacob</a> and discuss the detail.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel hbox hbox-auto-xs no-border">
+        <div class="col wrapper">
+            <i class="fa fa-circle-o text-info m-r-sm pull-right"></i>
+            <h4 class="font-thin m-t-none m-b-none text-primary-lt">Managed Services</h4>
+            <span class="m-b block text-sm text-muted">Service report of this year (updated 1 hour ago)</span>
+            <div
+                 ui-jq="plot" ui-options="
+            [
+              { data: {{d4}}, lines: { show: true, lineWidth: 1, fill:true, fillColor: { colors: [{opacity: 0.2}, {opacity: 0.8}] } } }
+            ],
+            {
+              colors: ['{{app.color.light}}'],
+              series: { shadowSize: 3 },
+              xaxis:{ show:false },
+              yaxis:{ font: { color: '#a1a7ac' } },
+              grid: { hoverable: true, clickable: true, borderWidth: 0, color: '#dce5ec' },
+              tooltip: true,
+              tooltipOpts: { content: '%s of %x.1 is %y.4',  defaultTheme: false, shifts: { x: 10, y: -25 } }
+            }
+          " style="height:240px">
+            </div>
+        </div>
+        <div class="col wrapper-lg w-lg bg-light dk r-r">
+            <div class="m-b text-md">Recent Activity</div>
+            <div class="streamline b-l m-b">
+                <div class="sl-item">
+                    <div class="m-l">
+                        <div class="text-muted">5 minutes ago</div>
+                        <p><a href class="text-info">Jessi</a> commented your post.</p>
+                    </div>
+                </div>
+                <div class="sl-item">
+                    <div class="m-l">
+                        <div class="text-muted">11:30</div>
+                        <p>Join comference</p>
+                    </div>
+                </div>
+                <div class="sl-item b-success b-l">
+                    <div class="m-l">
+                        <div class="text-muted">10:30</div>
+                        <p>Call to customer <a href class="text-info">Jacob</a> and discuss the detail.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
