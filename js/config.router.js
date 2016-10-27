@@ -87,17 +87,9 @@ angular.module('app')
                   url: '/state',
                   templateUrl: 'tpl/monitor_state.html'
               })
-              .state('app.monitor.cpu', {
+              .state('app.monitor.monitor', {
                   url: '/cpu',
-                  templateUrl: 'tpl/monitor_cpu.html'
-              })
-              .state('app.monitor.disk', {
-                  url: '/disk',
-                  templateUrl: 'tpl/ui_grid.html'
-              })
-              .state('app.monitor.memory', {
-                  url: '/memory',
-                  templateUrl: 'tpl/ui_bootstrap.html'
+                  templateUrl: 'tpl/monitor_monitoring.html'
               })
               .state('app.image', {
                   url: '/image',
